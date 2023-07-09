@@ -16,26 +16,6 @@ public class Slytherin extends HogwartsStudent {
     private final int resourcefulness;
     private final int desireForAuthority;
 
-    public int getCunning() {
-        return cunning;
-    }
-
-    public int getDetermination() {
-        return determination;
-    }
-
-    public int getAmbition() {
-        return ambition;
-    }
-
-    public int getResourcefulness() {
-        return resourcefulness;
-    }
-
-    public int getDesireFoAuthority() {
-        return desireForAuthority;
-    }
-
     private int sumStats() {
         return this.ambition + this.cunning + this.desireForAuthority + this.determination + this.resourcefulness;
     }
@@ -61,7 +41,9 @@ public class Slytherin extends HogwartsStudent {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         Slytherin slytherin = (Slytherin) o;
-        return cunning == slytherin.cunning && determination == slytherin.determination && ambition == slytherin.ambition && resourcefulness == slytherin.resourcefulness && desireForAuthority == slytherin.desireForAuthority;
+        return cunning == slytherin.cunning && determination == slytherin.determination
+                && ambition == slytherin.ambition && resourcefulness == slytherin.resourcefulness
+                && desireForAuthority == slytherin.desireForAuthority;
     }
 
     @Override
@@ -71,6 +53,9 @@ public class Slytherin extends HogwartsStudent {
 
     @Override
     public String toString() {
-        return "Slytherin{" + "name='" + name + '\'' + ", magicPower=" + magicPower + ", transgressionPower=" + transgressionPower + ", cunning=" + cunning + ", determination=" + determination + ", ambition=" + ambition + ", resourcefulness=" + resourcefulness + ", desireFoAuthority=" + desireForAuthority + '}';
+        return "Slytherin{" + "name='" + this.getName() + '\'' + ", magicPower=" + this.getMagicPower()
+                + ", transgressionPower=" + this.getTransgressionPower()
+                + ", cunning=" + cunning + ", determination=" + determination + ", ambition=" + ambition
+                + ", resourcefulness=" + resourcefulness + ", desireFoAuthority=" + desireForAuthority + '}';
     }
 }

@@ -3,7 +3,7 @@ public abstract class Student {
         this.name = name;
     }
 
-    protected String name;
+    private final String name;
 
     public String getName() {
         return name;

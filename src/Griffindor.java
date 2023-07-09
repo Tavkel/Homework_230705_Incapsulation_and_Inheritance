@@ -12,18 +12,6 @@ public class Griffindor extends HogwartsStudent {
     private final int honor;
     private final int bravery;
 
-    public int getGenerosity() {
-        return generosity;
-    }
-
-    public int getHonor() {
-        return honor;
-    }
-
-    public int getBravery() {
-        return bravery;
-    }
-
     private int sumStats() {
         return this.bravery + this.generosity + this.honor;
     }
@@ -61,9 +49,9 @@ public class Griffindor extends HogwartsStudent {
     @Override
     public String toString() {
         return "Griffindor{" +
-                "name='" + name + '\'' +
-                ", magicPower=" + magicPower +
-                ", transgressionPower=" + transgressionPower +
+                "name='" + this.getName() + '\'' +
+                ", magicPower=" + this.getMagicPower() +
+                ", transgressionPower=" + this.getMagicPower() +
                 ", generosity=" + generosity +
                 ", honor=" + honor +
                 ", bravery=" + bravery +

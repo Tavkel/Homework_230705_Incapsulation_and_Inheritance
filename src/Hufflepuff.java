@@ -12,18 +12,6 @@ public class Hufflepuff extends HogwartsStudent {
     private final int loyalty;
     private final int honesty;
 
-    public int getIndustriousness() {
-        return industriousness;
-    }
-
-    public int getLoyalty() {
-        return loyalty;
-    }
-
-    public int getHonesty() {
-        return honesty;
-    }
-
     private int sumStats() {
         return this.honesty + this.industriousness + this.loyalty;
     }
@@ -61,9 +49,9 @@ public class Hufflepuff extends HogwartsStudent {
     @Override
     public String toString() {
         return "Hufflepuff{" +
-                "name='" + name + '\'' +
-                ", magicPower=" + magicPower +
-                ", transgressionPower=" + transgressionPower +
+                "name='" + this.getName() + '\'' +
+                ", magicPower=" + this.getMagicPower() +
+                ", transgressionPower=" + this.getTransgressionPower() +
                 ", industriousness=" + industriousness +
                 ", loyalty=" + loyalty +
                 ", honesty=" + honesty +

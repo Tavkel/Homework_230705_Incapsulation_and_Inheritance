@@ -1,8 +1,8 @@
 import java.util.Objects;
 
 public abstract class HogwartsStudent extends Student {
-    protected final int magicPower;
-    protected final int transgressionPower;
+    private final int magicPower;
+    private final int transgressionPower;
 
     public HogwartsStudent(String name, int magicPower, int transgressionPower) {
         super(name);
@@ -54,7 +54,7 @@ public abstract class HogwartsStudent extends Student {
     @Override
     public String toString() {
         return "HogwartsStudent{" +
-                "name='" + name + '\'' +
+                "name='" + super.toString() + '\'' +
                 ", magicPower=" + magicPower +
                 ", transgressionPower=" + transgressionPower +
                 '}';

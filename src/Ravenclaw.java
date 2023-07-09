@@ -14,22 +14,6 @@ public class Ravenclaw extends HogwartsStudent {
     private final int ingenuity;
     private final int creativity;
 
-    public int getIntelligence() {
-        return intelligence;
-    }
-
-    public int getWisdom() {
-        return wisdom;
-    }
-
-    public int getIngenuity() {
-        return ingenuity;
-    }
-
-    public int getCreativity() {
-        return creativity;
-    }
-
     private int sumStats() {
         return this.creativity + this.ingenuity + this.intelligence + this.wisdom;
     }
@@ -55,7 +39,8 @@ public class Ravenclaw extends HogwartsStudent {
         if (o == null || getClass() != o.getClass()) return false;
         if (!super.equals(o)) return false;
         Ravenclaw ravenclaw = (Ravenclaw) o;
-        return intelligence == ravenclaw.intelligence && wisdom == ravenclaw.wisdom && ingenuity == ravenclaw.ingenuity && creativity == ravenclaw.creativity;
+        return intelligence == ravenclaw.intelligence && wisdom == ravenclaw.wisdom && ingenuity == ravenclaw.ingenuity
+                && creativity == ravenclaw.creativity;
     }
 
     @Override
@@ -66,9 +51,9 @@ public class Ravenclaw extends HogwartsStudent {
     @Override
     public String toString() {
         return "Ravenclaw{" +
-                "name='" + name + '\'' +
-                ", magicPower=" + magicPower +
-                ", transgressionPower=" + transgressionPower +
+                "name='" + this.getName() + '\'' +
+                ", magicPower=" + this.getMagicPower() +
+                ", transgressionPower=" + this.getTransgressionPower() +
                 ", intelligence=" + intelligence +
                 ", wisdom=" + wisdom +
                 ", ingenuity=" + ingenuity +
