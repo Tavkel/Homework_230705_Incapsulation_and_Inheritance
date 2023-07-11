@@ -1,16 +1,16 @@
 import java.util.Objects;
 
 public class Griffindor extends HogwartsStudent {
+    private final int generosity;
+    private final int honor;
+    private final int bravery;
+
     public Griffindor(String name, int magicPower, int transgressionPower, int generosity, int honor, int bravery) {
         super(name, magicPower, transgressionPower);
         this.generosity = generosity;
         this.honor = honor;
         this.bravery = bravery;
     }
-
-    private final int generosity;
-    private final int honor;
-    private final int bravery;
 
     private int sumStats() {
         return this.bravery + this.generosity + this.honor;
@@ -38,7 +38,8 @@ public class Griffindor extends HogwartsStudent {
         if (o == null || getClass() != o.getClass()) return false;
         if (!super.equals(o)) return false;
         Griffindor that = (Griffindor) o;
-        return generosity == that.generosity && honor == that.honor && bravery == that.bravery;
+        return generosity == that.generosity && honor == that.honor && bravery == that.bravery
+                && super.equals(that);
     }
 
     @Override

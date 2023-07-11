@@ -1,16 +1,16 @@
 import java.util.Objects;
 
 public class Hufflepuff extends HogwartsStudent {
+    private final int industriousness;
+    private final int loyalty;
+    private final int honesty;
+
     public Hufflepuff(String name, int magicPower, int transgressionPower, int industriousness, int loyalty, int honesty) {
         super(name, magicPower, transgressionPower);
         this.industriousness = industriousness;
         this.loyalty = loyalty;
         this.honesty = honesty;
     }
-
-    private final int industriousness;
-    private final int loyalty;
-    private final int honesty;
 
     private int sumStats() {
         return this.honesty + this.industriousness + this.loyalty;
@@ -38,7 +38,8 @@ public class Hufflepuff extends HogwartsStudent {
         if (o == null || getClass() != o.getClass()) return false;
         if (!super.equals(o)) return false;
         Hufflepuff that = (Hufflepuff) o;
-        return industriousness == that.industriousness && loyalty == that.loyalty && honesty == that.honesty;
+        return industriousness == that.industriousness && loyalty == that.loyalty && honesty == that.honesty
+                && super.equals(that);
     }
 
     @Override

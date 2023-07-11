@@ -1,6 +1,11 @@
 import java.util.Objects;
 
 public class Ravenclaw extends HogwartsStudent {
+    private final int intelligence;
+    private final int wisdom;
+    private final int ingenuity;
+    private final int creativity;
+
     public Ravenclaw(String name, int magicPower, int transgressionPower, int intelligence, int wisdom, int ingenuity, int creativity) {
         super(name, magicPower, transgressionPower);
         this.intelligence = intelligence;
@@ -8,11 +13,6 @@ public class Ravenclaw extends HogwartsStudent {
         this.ingenuity = ingenuity;
         this.creativity = creativity;
     }
-
-    private final int intelligence;
-    private final int wisdom;
-    private final int ingenuity;
-    private final int creativity;
 
     private int sumStats() {
         return this.creativity + this.ingenuity + this.intelligence + this.wisdom;
@@ -33,6 +33,7 @@ public class Ravenclaw extends HogwartsStudent {
             }
         }
     }
+
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
@@ -40,7 +41,7 @@ public class Ravenclaw extends HogwartsStudent {
         if (!super.equals(o)) return false;
         Ravenclaw ravenclaw = (Ravenclaw) o;
         return intelligence == ravenclaw.intelligence && wisdom == ravenclaw.wisdom && ingenuity == ravenclaw.ingenuity
-                && creativity == ravenclaw.creativity;
+                && creativity == ravenclaw.creativity && super.equals(ravenclaw);
     }
 
     @Override
