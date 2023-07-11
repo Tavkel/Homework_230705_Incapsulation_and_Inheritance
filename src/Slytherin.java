@@ -1,6 +1,12 @@
 import java.util.Objects;
 
 public class Slytherin extends HogwartsStudent {
+    private final int cunning;
+    private final int determination;
+    private final int ambition;
+    private final int resourcefulness;
+    private final int desireForAuthority;
+
     public Slytherin(String name, int magicPower, int transgressionPower, int cunning, int determination, int ambition, int resourcefulness, int desireFoAuthority) {
         super(name, magicPower, transgressionPower);
         this.cunning = cunning;
@@ -9,12 +15,6 @@ public class Slytherin extends HogwartsStudent {
         this.resourcefulness = resourcefulness;
         this.desireForAuthority = desireFoAuthority;
     }
-
-    private final int cunning;
-    private final int determination;
-    private final int ambition;
-    private final int resourcefulness;
-    private final int desireForAuthority;
 
     private int sumStats() {
         return this.ambition + this.cunning + this.desireForAuthority + this.determination + this.resourcefulness;
@@ -43,7 +43,7 @@ public class Slytherin extends HogwartsStudent {
         Slytherin slytherin = (Slytherin) o;
         return cunning == slytherin.cunning && determination == slytherin.determination
                 && ambition == slytherin.ambition && resourcefulness == slytherin.resourcefulness
-                && desireForAuthority == slytherin.desireForAuthority;
+                && desireForAuthority == slytherin.desireForAuthority && super.equals(slytherin);
     }
 
     @Override
@@ -55,6 +55,7 @@ public class Slytherin extends HogwartsStudent {
     public String toString() {
         return "Slytherin{" + "name='" + this.getName() + '\'' + ", magicPower=" + this.getMagicPower()
                 + ", transgressionPower=" + this.getTransgressionPower()
+                + super.toString()
                 + ", cunning=" + cunning + ", determination=" + determination + ", ambition=" + ambition
                 + ", resourcefulness=" + resourcefulness + ", desireFoAuthority=" + desireForAuthority + '}';
     }

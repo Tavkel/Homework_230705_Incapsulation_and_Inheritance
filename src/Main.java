@@ -6,6 +6,8 @@ public class Main {
             new Griffindor("Гарри Поттер", rng.nextInt(100), rng.nextInt(100), rng.nextInt(100), rng.nextInt(100), rng.nextInt(100)),
             new Griffindor("Гермиона Грейнджер", rng.nextInt(100), rng.nextInt(100), rng.nextInt(100), rng.nextInt(100), rng.nextInt(100)),
             new Griffindor("Рон Уизли", rng.nextInt(100), rng.nextInt(100), rng.nextInt(100), rng.nextInt(100), rng.nextInt(100)),
+            new Griffindor("Рон Уизли", 1, 1, 1, 1, 1),
+            new Griffindor("Рон Уизли", 1, 1, 1, 1, 1)
     };
     private static final Slytherin[] slytherinStudents = {
             new Slytherin("Драко Малфой", rng.nextInt(100), rng.nextInt(100), rng.nextInt(100), rng.nextInt(100), rng.nextInt(100), rng.nextInt(100), rng.nextInt(100)),
@@ -23,11 +25,13 @@ public class Main {
             new Hufflepuff("Джастин Финч-Флетчли", rng.nextInt(100), rng.nextInt(100), rng.nextInt(100), rng.nextInt(100), rng.nextInt(100)),
     };
     public static void main(String[] args) {
-        System.out.println(griffindorStudents[1]);
+//        System.out.println(griffindorStudents[1]);
         System.out.println(slytherinStudents[0]);
+//
+//        hufflepuffStudents[1].compareHufflepuffStudents(hufflepuffStudents[0]);
+//        ravenclawStudents[2].compareRavenclawStudents(ravenclawStudents[2]);
+//        ravenclawStudents[0].compareStudents(hufflepuffStudents[2]);
 
-        hufflepuffStudents[1].compareHufflepuffStudents(hufflepuffStudents[0]);
-        ravenclawStudents[2].compareRavenclawStudents(ravenclawStudents[2]);
-        ravenclawStudents[0].compareStudents(hufflepuffStudents[2]);
+        griffindorStudents[3].compareGriffindorStudents(griffindorStudents[4]);
     }
 }

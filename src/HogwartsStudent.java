@@ -1,13 +1,18 @@
 import java.util.Objects;
 
-public abstract class HogwartsStudent extends Student {
+public abstract class HogwartsStudent {
+    private final String name;
     private final int magicPower;
     private final int transgressionPower;
 
     public HogwartsStudent(String name, int magicPower, int transgressionPower) {
-        super(name);
+        this.name = name;
         this.magicPower = magicPower;
         this.transgressionPower = transgressionPower;
+    }
+
+    public String getName() {
+        return name;
     }
 
     public int getMagicPower() {
@@ -43,7 +48,8 @@ public abstract class HogwartsStudent extends Student {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         HogwartsStudent that = (HogwartsStudent) o;
-        return magicPower == that.magicPower && transgressionPower == that.transgressionPower;
+        return magicPower == that.magicPower && transgressionPower == that.transgressionPower
+                && name.equals(that.getName());
     }
 
     @Override
@@ -54,7 +60,7 @@ public abstract class HogwartsStudent extends Student {
     @Override
     public String toString() {
         return "HogwartsStudent{" +
-                "name='" + super.toString() + '\'' +
+                "name='" + name + '\'' +
                 ", magicPower=" + magicPower +
                 ", transgressionPower=" + transgressionPower +
                 '}';
