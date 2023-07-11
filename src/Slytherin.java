@@ -53,8 +53,7 @@ public class Slytherin extends HogwartsStudent {
 
     @Override
     public String toString() {
-        return "Slytherin{" + "name='" + this.getName() + '\'' + ", magicPower=" + this.getMagicPower()
-                + ", transgressionPower=" + this.getTransgressionPower()
+        return "Slytherin{"
                 + super.toString()
                 + ", cunning=" + cunning + ", determination=" + determination + ", ambition=" + ambition
                 + ", resourcefulness=" + resourcefulness + ", desireFoAuthority=" + desireForAuthority + '}';

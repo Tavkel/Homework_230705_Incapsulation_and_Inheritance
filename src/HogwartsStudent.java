@@ -59,10 +59,8 @@ public abstract class HogwartsStudent {
 
     @Override
     public String toString() {
-        return "HogwartsStudent{" +
-                "name='" + name + '\'' +
-                ", magicPower=" + magicPower +
-                ", transgressionPower=" + transgressionPower +
-                '}';
+        return "name='" + name + '\''
+                + ", magicPower=" + magicPower
+                + ", transgressionPower=" + transgressionPower;
     }
 }

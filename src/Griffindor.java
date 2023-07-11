@@ -50,9 +50,7 @@ public class Griffindor extends HogwartsStudent {
     @Override
     public String toString() {
         return "Griffindor{" +
-                "name='" + this.getName() + '\'' +
-                ", magicPower=" + this.getMagicPower() +
-                ", transgressionPower=" + this.getMagicPower() +
+                super.toString() +
                 ", generosity=" + generosity +
                 ", honor=" + honor +
                 ", bravery=" + bravery +

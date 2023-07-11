@@ -50,9 +50,7 @@ public class Hufflepuff extends HogwartsStudent {
     @Override
     public String toString() {
         return "Hufflepuff{" +
-                "name='" + this.getName() + '\'' +
-                ", magicPower=" + this.getMagicPower() +
-                ", transgressionPower=" + this.getTransgressionPower() +
+                super.toString() +
                 ", industriousness=" + industriousness +
                 ", loyalty=" + loyalty +
                 ", honesty=" + honesty +

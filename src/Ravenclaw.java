@@ -52,9 +52,7 @@ public class Ravenclaw extends HogwartsStudent {
     @Override
     public String toString() {
         return "Ravenclaw{" +
-                "name='" + this.getName() + '\'' +
-                ", magicPower=" + this.getMagicPower() +
-                ", transgressionPower=" + this.getTransgressionPower() +
+                super.toString() +
                 ", intelligence=" + intelligence +
                 ", wisdom=" + wisdom +
                 ", ingenuity=" + ingenuity +
